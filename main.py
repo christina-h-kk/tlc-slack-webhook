@@ -3,7 +3,7 @@ import httpx, os
 
 app = FastAPI()
 
-SLACK_WEBHOOK_URL = os.environ["https://api.slack.com/apps/A094ARD09DG"]
+SLACK_WEBHOOK_URL = os.environ["SLACK_WEBHOOK_URL"]
 
 @app.post("/github")
 async def github_webhook(request: Request):
